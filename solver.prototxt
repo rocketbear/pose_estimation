@@ -1,0 +1,34 @@
+# The train/test net protocol buffer definition.
+train_net: "D:/cpm_workspace/resnet_3/net_train.prototxt"
+
+# The base learning rate, momentum and the weight decay of the network.
+base_lr: 0.0001
+momentum: 0.9
+weight_decay: 0.0005
+regularization_type: "L2"
+
+# Do not clip gradients.
+clip_gradients: -1
+
+# The learning rate adaptation policy.
+lr_policy: "step"
+gamma: 0.1
+stepsize: 100000
+
+# Display every 100 iterations.
+display: 10
+
+# Average the loss for every 100 iterations.
+average_loss: 200
+
+# The maximum number of iterations.
+max_iter: 600000
+
+# Snapshot intermediate results.
+snapshot: 5000
+snapshot_prefix: "D:/cpm_workspace/resnet_3/model2/model"
+snapshot_diff: false
+
+# solver mode: CPU or GPU
+solver_mode: GPU
+solver_type: SGD
